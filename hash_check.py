@@ -21,7 +21,8 @@ readfile = "hash.csv"
 strr = ""
 
 APIs = [
-	""
+	"input ",
+	"api key"
     ]
 url = "https://www.virustotal.com/vtapi/v2/file/report"
 compared_sha1_index = {}
