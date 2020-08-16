@@ -17,7 +17,7 @@ matrix = []
 de_metrix=[]
 result_check_hash = []
 check_malwares = []
-readfile = "hash.csv"
+readfile = "detact.csv"
 strr = ""
 
 APIs = [
@@ -103,13 +103,13 @@ def compared_hash_input_csv():
 			check_malwares.append(row)
 			sha1 = row[0]
 			if len(check_malwares) == 1:
-				row[4] = "VT_RESULT"
-				ws.append([row[0],row[1],row[2],row[3],row[4]])
+				row[4] = "virus_total"
+				ws.append([row[0])
 			elif len(check_malwares) > 1:
 				for key in compared_sha1_index.keys():
 					if row[0] == key:
 						row[4] = compared_sha1_index.get(key)
-				ws.append([row[0],row[1],row[2],row[3],row[4]])
+				ws.append([row[0])
 
 	count_malwares = check_malwares.count('Malwares')
 	print('malwares count : ', count_malwares)
